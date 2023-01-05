@@ -1,8 +1,8 @@
 <?php
 
-namespace :vendor_namespace\Tests;
+namespace Esign\EnvironmentBadge\Tests;
 
-class :studly_package_nameTest extends TestCase
+class EnvironmentBadgeTest extends TestCase
 {
     /** @test */
     public function test()

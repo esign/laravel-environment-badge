@@ -1,13 +1,13 @@
 <?php
 
-namespace :vendor_namespace\Facades;
+namespace Esign\EnvironmentBadge\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class :studly_package_nameFacade extends Facade
+class EnvironmentBadgeFacade extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return ':package_name';
+        return 'environment-badge';
     }
 }
