@@ -11,7 +11,7 @@ class EnvironmentBadgeTest extends TestCase
     use InteractsWithViews;
 
     #[Test]
-    public function it_wont_render_the_badge_by_default()
+    public function it_wont_render_the_badge_by_default(): void
     {
         $component = $this->blade('<x-environment-badge />');
 
@@ -19,7 +19,7 @@ class EnvironmentBadgeTest extends TestCase
     }
 
     #[Test]
-    public function it_wont_render_the_badge_if_not_enabled()
+    public function it_wont_render_the_badge_if_not_enabled(): void
     {
         Config::set('environment-badge.enabled', false);
 
@@ -29,7 +29,7 @@ class EnvironmentBadgeTest extends TestCase
     }
 
     #[Test]
-    public function it_can_render_the_badge_if_enabled()
+    public function it_can_render_the_badge_if_enabled(): void
     {
         Config::set('environment-badge.enabled', true);
 
