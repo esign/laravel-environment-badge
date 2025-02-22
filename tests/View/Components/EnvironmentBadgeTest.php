@@ -2,6 +2,7 @@
 
 namespace Esign\EnvironmentBadge\Tests;
 
+use PHPUnit\Framework\Attributes\Test;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithViews;
 use Illuminate\Support\Facades\Config;
 
@@ -9,7 +10,7 @@ class EnvironmentBadgeTest extends TestCase
 {
     use InteractsWithViews;
 
-    /** @test */
+    #[Test]
     public function it_wont_render_the_badge_by_default()
     {
         $component = $this->blade('<x-environment-badge />');
@@ -17,7 +18,7 @@ class EnvironmentBadgeTest extends TestCase
         $this->assertEquals('', (string) $component);
     }
 
-    /** @test */
+    #[Test]
     public function it_wont_render_the_badge_if_not_enabled()
     {
         Config::set('environment-badge.enabled', false);
@@ -27,7 +28,7 @@ class EnvironmentBadgeTest extends TestCase
         $this->assertEquals('', (string) $component);
     }
 
-    /** @test */
+    #[Test]
     public function it_can_render_the_badge_if_enabled()
     {
         Config::set('environment-badge.enabled', true);
