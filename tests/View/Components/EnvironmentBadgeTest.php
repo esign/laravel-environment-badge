@@ -6,7 +6,7 @@ use PHPUnit\Framework\Attributes\Test;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithViews;
 use Illuminate\Support\Facades\Config;
 
-class EnvironmentBadgeTest extends TestCase
+final class EnvironmentBadgeTest extends TestCase
 {
     use InteractsWithViews;
 
