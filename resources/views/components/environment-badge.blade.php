@@ -29,9 +29,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: #25326D;
+            background: #1a418b;
             padding: 15px 10px;
-            border-left: 5px solid #1DFAC0;
+            border-left: 5px solid #ede9e3;
             backface-visibility: hidden;
         }
         .environment-badge__info p,
@@ -67,9 +67,7 @@
 
     <div class="environment-badge | js-environment-badge">
         <div class="environment-badge__content">
-            <svg viewBox="0 0 46.611 60.968" xmlns="http://www.w3.org/2000/svg" class="environment-badge__icon | js-environment-badge-open">
-                <path d="M44.825 0H1.787A1.792 1.792 0 0 0 0 1.79v48.661a2.84 2.84 0 0 0 1.665 2.445l19.972 7.8a5.242 5.242 0 0 0 3.332 0l19.977-7.8a2.845 2.845 0 0 0 1.665-2.445V1.79A1.793 1.793 0 0 0 44.825 0zM34.107 21.887l-10.795 4.794-8.592-3.821v2.321l8.592 3.813 10.795-4.788v7.122l-10.795 4.795-8.592-3.819v2.319l8.592 3.813 10.795-4.785v7.118l-10.795 4.8-10.8-4.806v-2.409l10.8 4.806 8.595-3.813v-2.315l-8.595 3.815-10.792-4.791v-7.124l10.792 4.787 8.595-3.813v-2.321l-8.595 3.819-10.792-4.792V19.48l10.792 4.792 8.595-3.816v-2.313l-8.595 3.815-10.8-4.8v-2.406l10.8 4.805 10.795-4.79z"></path>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86.7 66.7" class="environment-badge__icon | js-environment-badge-open" style="enable-background:new 0 0 86.7 66.7" xml:space="preserve"><path d="M85.1 31.9c-26.6.2-37.9-15.3-40.4-30.2-.2-1.5-2.4-1.5-2.7 0v.1C39.4 16.6 28.1 32 1.7 31.9h-.1c-1.7.2-1.7 2.8 0 2.8 26.6-.2 37.9 15.2 40.4 30.2.2 1.5 2.4 1.5 2.7 0v-.1c2.6-14.9 13.9-30.3 40.4-30.1 1.7 0 1.7-2.6 0-2.8" style="fill:#ffffff"/></svg>
             <div class="environment-badge__info">
                 <p class="environment-badge__title">{{ __('environment-badge::environment-badge.title') }}</p>
                 <p class="environment-badge__subtitle">
