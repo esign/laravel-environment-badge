@@ -10,10 +10,10 @@ jobs:
     test:
         runs-on: ${{ matrix.os }}
         strategy:
-            fail-fast: true
+            fail-fast: false
             matrix:
                 os: [ubuntu-latest]
-                php: [8.5, 8.4, 8.3, 8.2, 8.1, 8.0, 7.4]
+                php: [8.6, 8.5, 8.4, 8.3, 8.2, 8.1, 8.0, 7.4]
                 laravel: [13.*, 12.*, 11.*, 10.*, 9.*, 8.*]
                 stability: [prefer-lowest, prefer-stable]
                 include:
@@ -78,6 +78,8 @@ jobs:
                   echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
             - name: Install dependencies
               run: |
+                  # Laravel releases below 12.71 are affected by security advisories; still test the full supported range.
+                  composer config policy.advisories.block false || true  # key is unknown to Composer 2.2 (PHP < 7.2.5)
                   composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
                   composer update --${{ matrix.stability }} --prefer-dist --no-interaction
             - name: Execute tests
